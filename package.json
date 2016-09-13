@@ -1,0 +1,23 @@
+{
+  "name": "chat_app_node",
+  "version": "1.0.0",
+  "description": "A Chat App using NodeJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashley-desouza/Chat_Node.git"
+  },
+  "author": "Ashley DeSouza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashley-desouza/Chat_Node/issues"
+  },
+  "homepage": "https://github.com/ashley-desouza/Chat_Node#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.4.5"
+  }
+}
