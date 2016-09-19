@@ -1,6 +1,6 @@
 'use strict';
 
-let socket = io.connect("http://localhost:3000");
+let socket = io();
 
 socket.on('message', data => {
 	const $serverMessages = jQuery('#serverMessages');
