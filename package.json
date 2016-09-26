@@ -4,7 +4,9 @@
   "description": "A Chat App using NodeJS",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server.js",
+    "build": "babel server.js -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,8 @@
   },
   "homepage": "https://github.com/ashley-desouza/Chat_Node#readme",
   "dependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
     "express": "^4.14.0",
     "moment": "^2.15.0",
     "socket.io": "^1.4.5"
