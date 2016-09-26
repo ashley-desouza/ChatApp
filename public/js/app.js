@@ -17,6 +17,7 @@ socket.on('connect', () => {
 socket.on('message', data => {
 	const $serverMessages = jQuery('#serverMessages');
 	const $chatRoom = jQuery('.roomTitle');
+	const $serverMessage = jQuery('<li class="list-group-item"></li>');
 
 	// http://momentjs.com/docs/#/parsing/utc/
 	const momentTimeStamp = moment.utc(data.timestamp); // UNIX Timestamp as a Moment Object
@@ -28,8 +29,10 @@ socket.on('message', data => {
 
 	$chatRoom.text(room);
 
-	$serverMessages.append(`<p><strong>${localTimeStampFormatted} ${data.username}:</strong></p>`);
-	$serverMessages.append(`<p>${data.text}</p>`);
+	$serverMessage.append(`<p><strong>${localTimeStampFormatted} ${data.username}:</strong></p>`);
+	$serverMessage.append(`<p>${data.text}</p></li>`);
+
+	$serverMessages.append($serverMessage);
 });
 
 document.addEventListener('submit', event => {
